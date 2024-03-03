@@ -1,3 +1,4 @@
 export default defineEventHandler(async (event) => {
-  return 1
+  const body = await useBody(event)
+  return body
 })
