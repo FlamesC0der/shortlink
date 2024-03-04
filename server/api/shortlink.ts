@@ -14,8 +14,8 @@ function generateShortenedLinkPattern(length: number) {
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  console.log(body)
   const Newpattern = generateShortenedLinkPattern(6)
+  
   await prisma.link.create({
     data: {
       shorturl: Newpattern,
